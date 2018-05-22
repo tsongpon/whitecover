@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import StoryList from '../storylist/StoryList'
-import {getStories} from '../../util/StoryAPI'
+import Story from './Story';
+import StoryCard from './StoryCard'
+import { getStories } from '../util/StoryAPI'
 
-export default class Container extends Component {
+export default class Listing extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -21,8 +22,9 @@ export default class Container extends Component {
     render() {
         let stories = this.state.stories.map(each => {
             return (
-                <div>
-                    <StoryList
+                <div key={each.id}>
+                    <StoryCard
+                        id={each.id}
                         title={each.title}
                         author={each.author}
                         content={each.content} />
@@ -31,13 +33,8 @@ export default class Container extends Component {
         })
 
         return (
-            <div>
-                <div className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-light text-dark border-bottom box-shadow">
-                    <h5 className="my-0 mr-md-auto font-weight-normal">White Cover</h5>
-                </div>
-                <div className='container'>
-                    {stories}
-                </div>
+            <div className='container'>
+                {stories}
             </div>
         )
     }
