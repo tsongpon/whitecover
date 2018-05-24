@@ -20,7 +20,6 @@ export default class App extends Component {
                     <br/>
                     <br/>
                     <br/>
-                    <br/>
                     <Switch>
                         <Route exact path="/" component={Listing} />
                         <Route path="/story/:id" component={Story} />

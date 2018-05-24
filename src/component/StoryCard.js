@@ -13,7 +13,7 @@ let StoryCard = props => (
                 <h5 className="card-title font-weight-bold">{props.title}</h5>
                 <p className="card-text">{props.content}</p>
                 <footer className="blockquote-footer">by <cite title="Source Title">{props.author}</cite></footer>
-                <Link className="btn btn-primary" to={"/story/" + props.id}>อ่านเรื่อง {props.title} ต่อ</Link>
+                <Link className="btn btn-primary" to={"/story/" + props.id}>อ่านเรื่องเต็ม</Link>
             </div>
         </div>
         <br />
