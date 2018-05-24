@@ -28,7 +28,7 @@ export default class Story extends Component {
                         {this.state.story.title}
                     </div>
                     <div className="card-body">
-                        <p className="card-text">{this.state.story.content}</p>
+                        <p style={{'white-space':'pre-line'}} className="card-text">{this.state.story.content}</p>
                     </div>
                 </div>
             </div>
