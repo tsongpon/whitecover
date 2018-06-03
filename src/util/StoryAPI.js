@@ -1,7 +1,7 @@
 const API = 'http://whitebook-prod.ap-southeast-1.elasticbeanstalk.com/api/v1/stories'
 
-export function getStories() {
-    return fetch(API + "?shortcontent=true").then(res => res.json())
+export function getStories(start, size) {
+    return fetch(API + "?shortcontent=true&start="+start+"&size="+size).then(res => res.json())
         .catch(err => {
             console.log(err)
         })
