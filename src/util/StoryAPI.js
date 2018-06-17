@@ -1,4 +1,4 @@
-const API = 'http://whitebook-prod.ap-southeast-1.elasticbeanstalk.com/api/v1/stories'
+const API = 'http://ecs-load-balancer-2037700212.ap-southeast-1.elb.amazonaws.com/api/v1/stories'
 
 export function getStories(start, size) {
     return fetch(API + "?shortcontent=true&start="+start+"&size="+size).then(res => res.json())
